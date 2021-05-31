@@ -24,3 +24,22 @@ int main(void) {
   }
 }
 
+float wallis_pi (int x)
+	{
+
+	float pi,fraction,value,num,den;
+	int n= x;
+	value=1;
+	
+	int i;
+	for (i=1;i<n;i++) 
+		{
+			num = 4*i*i;
+			den = num-1;
+			fraction = num/den;
+			value = value*fraction;
+		}
+	
+	pi=value*2;
+	return pi;
+	}
